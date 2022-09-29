@@ -125,3 +125,10 @@
 .data_height {
   border-right: 1px solid #ccc;
 }
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

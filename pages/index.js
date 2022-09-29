@@ -1,8 +1,11 @@
 import Image from "next/image";
 
+import React, { useState } from "react";
+
 import styles from "../styles/Home.module.css";
 
-import Card from "../components/Card"
+import Card from "../components/Card";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const maxPokemons = 251;
@@ -24,6 +27,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ pokemons }) {
+  const [search, setSearch] = useState("");
+ 
   return (
     <>
       <div className={styles.title_container}>
@@ -36,6 +41,17 @@ export default function Home({ pokemons }) {
           height="50"
           alt="PokeNext"
         />
+      </div>
+      <div className={styles.search}>
+        <input
+          type="number"
+          placeholder="ID"
+          onInput={(e) => e.target.value = e.target.value.slice(0, 3)}
+          onChange={(e) => setSearch(e.target.value)}
+          value={search}
+        />
+        <Link href={`/pokemon/${search}`}>Buscar</Link>
+        <span>* Busque pelo id do pokemon</span>
       </div>
       <div className={styles.pokemon_container}>
         {pokemons.map((pokemon) => (

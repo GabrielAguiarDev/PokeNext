@@ -8,3 +8,31 @@
 .main-container {
     min-height: 70vh;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -32px;
+    margin-bottom: -33px;
+    background-color: black;
+    color: #fff;
+}
+
+.notFound h1 {
+    font-size: 20px;
+    font-weight: bold;
+}

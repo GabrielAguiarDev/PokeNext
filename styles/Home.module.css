@@ -24,3 +24,45 @@
     max-width: 1100px;
     margin: 0 auto;
 }
+
+.search {
+    margin: 2em;
+}
+
+.search input {
+    height: 35px;
+    width: 60px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0.5em;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search a {
+    text-decoration: none;
+    padding: 0.6em 0.5em;
+    background-color: #e33c33;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.search a:hover {
+    background-color: #c5342c;
+}
+
+.search span {
+    font-weight: bold;
+    font-style: italic;
+    color: #bdbdbd;
+    margin-left: 0.8em;
+
+}
